@@ -1,22 +1,24 @@
+import React from 'react';
 import '../NavBar/NavBar.css'
 
-function NavBar () {
+function NavBar() {
     return(
-
+        <>
         <nav>
-            <h2><a href=''>logo</a></h2>
-
-            <div >
-                <ul id='navbar'>
-                    <li><a href=''>Home</a></li>
-                    <li><a href=''>Shop</a></li>
-                    <li><a href=''>Blog</a></li>
-                    <li><a href=''>About</a></li>
-                    <li><a href=''>Contact</a></li>
-                </ul>
+            <h2>Navbar <span>Responsive</span></h2>
+            <div className='listPage'>
+                <a href='/'>Home</a>
+                <a href='/'>Shop</a>
+                <a href='/'>About</a>
+                <a href='/'>Contact</a>
+                <a href='/'>Blog</a>
             </div>
         </nav>
+        </>
+
     )
 }
 
 export default NavBar
+
+
