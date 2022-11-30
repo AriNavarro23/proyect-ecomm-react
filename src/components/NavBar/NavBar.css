@@ -1,36 +1,70 @@
-nav{
-    padding: .4rem;
-    background-color: #333;
+.NavBar {
     display: flex;
+    background: transparent;
+    justify-content: space-around;
     align-items: center;
-    justify-content: space-between;
+    height: 60px;
+    background: wheat;
 }
 
-nav h2{
-    color: #fff;
-    font-weight: 400;
+.Categories {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-nav span{
-    font-weight: bold;
-}
-
-.listPage a{
-    color: #fff;
+.Option {
+    /* color: #8C30F5; */
     text-decoration: none;
-    margin-right: 1rem;
+    border-radius: 25;
+    margin: 0 50px;
+    /* TODO */
+    width: auto;
+    padding: 12px;
+    font-size: 8px;
+    background: #8C30F5;
+    border-radius: 8px;
+    flex: none;
+    display: flex;
+    order: 1;
+    align-self: center;
+    flex-grow: 0;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #FFFFFF;
+    border: none;
+    border-style: none;
+    cursor: pointer;
+    outline: inherit;
 }
 
+.ActiveOption {
+    /* color: #8C30F5; */
+    text-decoration: none;
+    border-radius: 25;
+    margin: 0 50px;
+    /* TODO */
+    width: auto;
+    padding: 12px;
+    font-size: 8px;
+    background: red;
+    border-radius: 8px;
+    flex: none;
+    display: flex;
+    order: 1;
+    align-self: center;
+    flex-grow: 0;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #FFFFFF;
+    border: none;
+    border-style: none;
+    cursor: pointer;
+    outline: inherit;
+}
 
-@media(min-width:768px){
-    .listPage {
-        position: initial;
-        margin: 0;
-    }
-
-    .listPage a{
-        font-size: 1rem;
-        color: #fff;
-        display: inline;
-    }
+.NavLink {
+    color: rgb(255, 0, 0)
 }
