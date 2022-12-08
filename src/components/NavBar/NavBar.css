@@ -7,10 +7,15 @@
     background: wheat;
 }
 
-.Categories {
+.NavBar h2{
+    margin: 20px;
+}
+
+.categories {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    width: 100%;
 }
 
 .Option {
