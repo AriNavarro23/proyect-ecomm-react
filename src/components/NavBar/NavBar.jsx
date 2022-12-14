@@ -1,21 +1,17 @@
-import './NavBar.css'
+import { Link } from "react-router-dom";
 import CartWidget from '../CartWidget/CartWidget'
+import './NavBar.css'
 
-const NavBar = () => {
+const NavBar = ({categories}) => {
 
-    const categories = [
-        { id: 1, name: "MarketPlace" },
-        { id: 2, name: "About" },
-        { id: 3, name: "Contact" }
-    ]
 
     return (
         <nav className="NavBar" >
             <h2>LOGO</h2>
             <div className='categories'>
-                {categories.map((category, index) => {
+                {categories.map((category) => {
                     return (
-                        <a href="" key={index}>{category.name}</a>
+                        <Link to={`/category/${category.name}`}>{category.name}</Link>
                     )
                 })}
             </div>
