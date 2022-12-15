@@ -10,8 +10,13 @@ const ItemListContainer = () => {
     const { id } = useParams()
 
     const FilterCategory = new Promise((resolve, eject) => {
+        if(id){
         const newProducts = products.filter((p) => p.category == id)
         resolve(newProducts)
+    }
+    else{
+        resolve(products)
+    }
     })
 
 
