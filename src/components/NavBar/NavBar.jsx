@@ -13,7 +13,7 @@ const NavBar = ({categories}) => {
             <div className='categories'>
                 {categories.map((category) => {
                     return (
-                        <Link to={`/category/${category.name}`}>{category.name}</Link>
+                        <Link to={`/category/${category.id}`}>{category.name}</Link>
                     )
                 })}
             </div>

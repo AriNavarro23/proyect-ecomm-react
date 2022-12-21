@@ -8,7 +8,7 @@ export const categories = [
 export const products = [
 
     {
-        id: '10',
+        id: 1,
         name: 'iphone 12',
         price: 1000,
         category: 1,
@@ -18,7 +18,7 @@ export const products = [
     },
 
     {
-        id: '11',
+        id: 2,
         name: 'samsung s21',
         price: 800,
         category: 2,
@@ -28,7 +28,7 @@ export const products = [
     },
 
     {
-        id: '12',
+        id: 3,
         name: 'Ipad 8va generacion',
         price: 1200,
         category: 3,
