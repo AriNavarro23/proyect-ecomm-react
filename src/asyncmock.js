@@ -17,7 +17,7 @@ export const products = [
         description: 'Descripcion de Iphone 12'
     },
 
-    {
+    {   
         id: 2,
         name: 'samsung s21',
         price: 800,
