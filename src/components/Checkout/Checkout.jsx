@@ -1,6 +1,8 @@
 import React from 'react'
 import { products } from '../../asyncmock';
 // import { collection, getFirestore } from "module";
+import './Checkout.css'
+
 
 const Checkout = () => {
 
@@ -26,10 +28,10 @@ const Checkout = () => {
 
     return (
         <div>
-            <h1>Finalizar comprasa</h1>
+            <h1>Finalizar compra</h1>
             {products.map((product) => {
                 return(
-                    <div className=''>
+                    <div className='buyOrder'>
                         <img src={product.img} width={50} height={50} alt="" />
                         <p>{product.name}</p>
                         <p>{product.price}</p>

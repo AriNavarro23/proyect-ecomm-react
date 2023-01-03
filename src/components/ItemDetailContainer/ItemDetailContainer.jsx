@@ -1,7 +1,7 @@
 import React from 'react'
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { products } from "../../asyncmock";
+import { doc, getDoc, getFirestore } from "firebase/firestore";
 import ItemDetail from '../ItemDetail/ItemDetail'
 
 const ItemDetailContainer = () => {
@@ -10,12 +10,17 @@ const ItemDetailContainer = () => {
     const [product, setProducto] = useState();
 
     useEffect(() => {
-        const producto = products.filter((p) => p.id == id);
-        setProducto(producto);
-    }, [id]);
+        const db = getFirestore();
+        const orderDoc = doc(db, "item", id);
+        getDoc(orderDoc).then(result => {
+            if (result.exists()) {
+                setProducto({ ...result.data() })
+            }
+        })
+    }, []);
 
 
-    return  product ? <ItemDetail product={product} /> : <h1>...cargando</h1>
+    return product ? <ItemDetail product={product} /> : <h1>...cargando</h1>
 }
 
 export default ItemDetailContainer

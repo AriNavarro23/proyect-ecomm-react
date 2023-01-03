@@ -8,13 +8,13 @@ const ItemDetail = ({product}) => {
 
     //Pasandole props de hijo a padre
     const handlerAddCount = (count) =>{
-        addCount(count, product[0])
+        addCount(count, product)
     }
 
     return (
             <div>
-                <h1>detalle del producto {product[0].name}</h1>
-                <img src={product[0].img} width={300} height={300} alt='' />
+                <h1>detalle del producto {product.name}</h1>
+                <img src={product.img} width={300} height={300} alt='' />
                 <ItemCount onChangeCount={(e) => handlerAddCount(e)}/>
             </div>
     )

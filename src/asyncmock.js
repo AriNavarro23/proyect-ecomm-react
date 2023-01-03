@@ -1,7 +1,7 @@
 export const categories = [
-    { id: 1, name: "Celulares" },
-    { id: 2, name: "Tablet" },
-    { id: 3, name: "Notebook" }
+    { id: 1, name: "Coffee Grane" },
+    { id: 2, name: "Coffee Machine" },
+    { id: 3, name: "Accesories" }
 ]
 
 
