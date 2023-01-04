@@ -1,3 +1,7 @@
-.itemListContainer div{
-    padding: 20px;
+.itemListContainer {
+    display: flex;
+    margin: 1rem;
+    justify-content: center;
 }
+
+
