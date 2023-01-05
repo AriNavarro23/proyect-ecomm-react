@@ -1,12 +1,12 @@
 import React from 'react'
 import { products } from '../../asyncmock';
-// import { collection, getFirestore } from "module";
+import { addDoc, collection, getFirestore } from 'firebase/firestore';
 import './Checkout.css'
 
 
 const Checkout = () => {
 
-    /*const sendOrder = () => {
+    const sendOrder = () => {
         const order = {
             buyer:{
                 name: 'Ariel', phone:'1234',
@@ -21,10 +21,14 @@ const Checkout = () => {
 
         // referencia a base de datos
         const db = getFirestore();
-
         //referencia a colleccion, pasar parametro de orden de colleccion en firestore
-        const orderCollection = collection(db,'')
-    } */
+        const orderCollection = collection(db,'orders')
+        //Llamo funcion addDoc, para traer ordenes y enviar, como es una promesa uso .then
+        //le paso el ID como parametro
+        addDoc(orderCollection,order).then(({id}) => alert(id))
+
+
+    };
 
     return (
         <div>
@@ -38,6 +42,9 @@ const Checkout = () => {
                     </div>
                 );
             })}
+            <div>
+                <button onClick={() => sendOrder()}>Generar orden</button>
+            </div>
         </div>
     );
 };
