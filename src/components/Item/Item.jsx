@@ -14,24 +14,25 @@ const Item = ({ product }) => {
     return (
 
         <Card className='card' sx={{ maxWidth: 345 }}>
-            <CardMedia
-                sx={{ height: 200 }}
-                image={product.img}
-                title="green iguana"
-            />
-            <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                    <Link to={`/item/${product.id}`}><p>{product.name}</p></Link>
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                    Lizards are a widespread group of squamate reptiles, with over 6,000
-                    species, ranging across all continents except Antarctica
-                </Typography>
-            </CardContent>
-            <CardActions>
-                <Button size="small">Share</Button>
-                <Button size="small">Learn More</Button>
-            </CardActions>
+            <Link to={`/item/${product.id}`}>
+                <CardMedia
+                    sx={{ height: 250, 
+                        width: 330 }}
+                    image={product.img}
+                    title="green iguana"
+                />
+                <CardContent >
+                    <Typography>
+                        <p>${product.price}</p>
+                    </Typography>
+                    <Typography fontSize={14} gutterBottom variant="h5" component="div">
+                        <p>{product.name}</p>
+                    </Typography>
+                </CardContent>
+                <CardActions sx={{justifyContent:'center'}}>
+                    <Link to={`/item/${product.id}`}><Button size="small">Ver detalle</Button></Link>
+                </CardActions>
+            </Link>
         </Card>
 
     )

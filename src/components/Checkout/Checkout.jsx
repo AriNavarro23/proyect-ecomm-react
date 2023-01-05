@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { products } from '../../asyncmock';
 import { addDoc, collection, getFirestore } from 'firebase/firestore';
 import './Checkout.css'
-
+import { CartContext } from '../../Context/CartContext';
 
 const Checkout = () => {
+
+    const { getTotal } = useContext(CartContext);
 
     const sendOrder = () => {
         const order = {
@@ -16,7 +18,7 @@ const Checkout = () => {
                 name:'iphone',
                 price: 2000
             }],
-            total: 2000
+            total: getTotal(),
         }
 
         // referencia a base de datos
@@ -25,7 +27,7 @@ const Checkout = () => {
         const orderCollection = collection(db,'orders')
         //Llamo funcion addDoc, para traer ordenes y enviar, como es una promesa uso .then
         //le paso el ID como parametro
-        addDoc(orderCollection,order).then(({id}) => alert(id))
+        addDoc(orderCollection,order).then(({id}) => alert('Orden generada! ' + id))
     };
 
     return (
@@ -40,6 +42,7 @@ const Checkout = () => {
                     </div>
                 );
             })}
+            <h3>Total: ${getTotal()}</h3>
             <div>
                 <button onClick={() => sendOrder()}>Generar orden</button>
             </div>

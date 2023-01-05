@@ -22,6 +22,21 @@ export const CartContextProvider = ({ children }) => {
         })
     }
 
+    
+    //Logic for give me quantity in cart
+    const getQuantity = () => {
+        let count = 0
+        cart.forEach(prod => {
+            count += prod.quantity
+        })
+        return count
+    }
+
+    //
+    const isInCart = (id) => {
+        return cart.some(p => p.id === id )
+    }
+
     //Logic for clean cart
     const clearCart = () => {
         setCart([])
@@ -31,6 +46,11 @@ export const CartContextProvider = ({ children }) => {
     const removeItem = (id) => {
         const products = cart.filter(prod => prod.id !== id )
         setCart(products)
+    }
+
+    //Logic for get quantity of product into cart
+    const getQuantityProd = (id) => {
+        return cart.find(prod => prod.id === id)?.quantity
     }
 
     //Logic for total into detail buy order
@@ -48,10 +68,12 @@ export const CartContextProvider = ({ children }) => {
             value={{
                 count: state.count,
                 addCount,
-                getTotal,
-                removeItem,
+                getQuantity,
+                isInCart,
                 clearCart,
-
+                removeItem,
+                getQuantityProd,
+                getTotal,
             }}
         >
             {children}
