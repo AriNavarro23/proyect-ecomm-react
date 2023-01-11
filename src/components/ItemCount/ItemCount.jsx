@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './ItemCount.css'
 
 const ItemCount = ({ onChangeCount }) => {
     const [value, setValue] = useState(0)
@@ -18,9 +19,11 @@ const ItemCount = ({ onChangeCount }) => {
     return (
         <div>
             <h4>Add Item</h4>
-            <button onClick={() => handlerSubstractCount()}>-</button>
-            <input type="text" value={value} onChange={(e) => setValue(e.target.value)} />
-            <button onClick={() => handlerAddCount()}>+</button>
+            <div className='containerInput'>
+                <button onClick={() => handlerSubstractCount()}>-</button>
+                <input type="text" value={value} onChange={(e) => setValue(e.target.value)} />
+                <button onClick={() => handlerAddCount()}>+</button>
+            </div>
         </div>
     )
 }

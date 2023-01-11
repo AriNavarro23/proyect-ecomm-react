@@ -1,0 +1,32 @@
+.ItemDetail{
+    display: flex;
+    justify-content: space-around;
+    padding: 5rem 0;
+    flex-direction: column;
+}
+
+.ItemDetail img{
+    height: 200px;
+}
+
+
+
+.tittleDetail{
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.tittleDetail h1{
+    font-size: 3rem;
+}
+
+
+
+.detailProduct{
+    display: flex;
+    justify-content: space-around;
+}
+
+.detailProduct h1{
+    font-size: 1rem;
+}
