@@ -14,7 +14,7 @@ const Item = ({ product }) => {
     return (
 
         <Card className='card' sx={{ maxWidth: 345 }}>
-            <Link to={`/item/${product.id}`}>
+            <Link to={`/item/${product.id}`} style={{ textDecoration: 'none' }}>
                 <CardMedia
                     sx={{ height: 250, 
                         width: 330 }}

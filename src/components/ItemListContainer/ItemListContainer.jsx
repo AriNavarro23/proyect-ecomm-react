@@ -46,10 +46,8 @@ const ItemListContainer = ({}) => {
         console.log({ id, filtro });
     }, [id]);
 
-
     // la palabra snapshot es solo una variable, se puede cambiar por cualquier nombre
     // seria el resultado a la respuesta de la consulta de firebase
-
 
 
     useEffect(() => {

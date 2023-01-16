@@ -27,7 +27,7 @@ const Checkout = () => {
         const orderCollection = collection(db,'orders')
         //Llamo funcion addDoc, para traer ordenes y enviar, como es una promesa uso .then
         //le paso el ID como parametro
-        addDoc(orderCollection,order).then(({id}) => alert('Orden generada! ' + id))
+        addDoc(orderCollection,order).then(({id}) => alert('Orden generada! '))
     };
 
     return (

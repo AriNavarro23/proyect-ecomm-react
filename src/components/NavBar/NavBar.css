@@ -22,6 +22,14 @@
     margin: 20px;
 }
 
+.logo{
+    margin-left: 20px;
+}
+
+.logo img{
+    height: 100px;
+}
+
 .categories {
     display: flex;
     justify-content: space-around;
